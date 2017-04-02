@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+﻿import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -27,7 +27,6 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.route.params.subscribe((params:any) => {
       this.isNew = !params.hasOwnProperty('id');
-      console.log(this.isNew);
       if (!this.isNew) {
         this.recipeIndex = +params['id'];
         this.recipe = this.recipeService.getRecipe(this.recipeIndex);
