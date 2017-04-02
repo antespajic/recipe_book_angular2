@@ -1,5 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 import { Recipe } from './recipe';
 import { Ingredient } from '../shared/ingredient';
